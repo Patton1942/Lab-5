@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="8cb2b9dc-099b-4b6b-9ea2-47e947bfb631" last-modified="2020-08-03T22:28:38" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>*New Unsaved Indicator*</short_description>
+  <authored_date>2020-08-03T22:27:23</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="5302a5a5-ad55-4cad-b5fb-c87a67e347df">
+      <IndicatorItem id="a26fcc46-e9e4-4a18-964c-6d6ca300d830" condition="contains">
+        <Context document="FileItem" search="FileItem/FileExtension" type="mir" />
+        <Content type="string">img</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

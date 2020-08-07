@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="138c0cf8-97de-4c1f-b8d8-43bcc4e5b86a" last-modified="2020-08-03T16:45:03" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>Name</short_description>
+  <authored_by>Clever</authored_by>
+  <authored_date>2020-08-03T16:44:28</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="ce9785d7-4dff-45d0-9333-5bb76da576a2">
+      <IndicatorItem id="116451f4-c7b6-40ff-9fd0-dc2ecf9e4ce0" condition="contains">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">Pi-Star_RPi_V4.1.2_20-May-2020.img</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

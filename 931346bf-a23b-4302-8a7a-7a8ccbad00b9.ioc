@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="931346bf-a23b-4302-8a7a-7a8ccbad00b9" last-modified="2020-08-01T13:51:53" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>PI star </short_description>
+  <description>Issue with lab</description>
+  <authored_by>Kyle Clever</authored_by>
+  <authored_date>2020-08-01T13:49:04</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="640f097e-87d1-43a3-8b4d-b4312537b8d8">
+      <IndicatorItem id="3677542f-1f6b-497c-af7a-71dbd8689ad8" condition="contains">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">Pi-Star_RPi</Content>
+      </IndicatorItem>
+      <Indicator operator="AND" id="c04fb59a-8123-47cd-971b-52a2ca405016">
+        <IndicatorItem id="4eec918b-6c69-436f-b560-81b9665e532a" condition="is">
+          <Context document="FileItem" search="FileItem/SizeInBytes" type="mir" />
+          <Content type="int">1.891328</Content>
+        </IndicatorItem>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
